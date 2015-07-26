@@ -1,17 +1,18 @@
 <html>
     <head>
         <link rel="stylesheet" href="assets/css/flipclock.css">
+        <link rel="stylesheet" href="assets/css/page.css">
         <title>time until vacation</title>
 
         <script src="assets/js/libs/jquery-2.1.4.min.js"></script>
         <script src="assets/js/libs/flipclock.min.js"></script>
     </head>
     <body>
-        <div class="your-clock"></div>
+        <div class="clock"></div>
         <script>
             var theDate = new Date("2015-09-09");
             var timeDelta = (theDate - new Date()) / 1000;
-            var clock = $('.your-clock').FlipClock(timeDelta, {
+            var clock = $('.clock').FlipClock(timeDelta, {
                 clockFace: 'DailyCounter',
                 countdown: true
             });
