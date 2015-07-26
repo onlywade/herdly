@@ -1,7 +1,8 @@
 FROM python:2.7
 
-WORKDIR /usr/src/
-ADD * /usr/src/
+RUN mkdir /usr/www/
+WORKDIR /usr/www/
+ADD . /usr/www/
 
 CMD ["python", "-m", "SimpleHTTPServer", "80"]
 
